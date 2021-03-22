@@ -1,0 +1,99 @@
+// New arrivals
+.arrivals {
+   background-color: #f8f3f4;
+   padding: 60px 0;
+   &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__h3 {
+      @include fontstyle(regular, h3, upper);
+      color: $bittersweet;
+   }
+   &__breadcrumbs {
+      display: flex;
+   }
+   &-breadcrumbs {
+      &__link {
+         @include fontstyle(regular, text, upper);
+         color: #636363;
+         text-decoration: none;
+      }
+      &__list {
+         &::after {
+            content: "/";
+            margin: 0 5px;
+         }
+         &:last-of-type::after {
+            content: "";
+            margin: 0;
+         }
+      }
+   }
+   .active__bc {
+      color: $bittersweet;
+   }
+}
+
+// Sidebar
+.product {
+   &__sidebar {
+   }
+   &__filter {
+   }
+   &-filter {
+      &__link {
+      }
+      &__details {
+         display: none;
+         position: relative;
+         margin-bottom: 18px;
+         &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 5px;
+            height: 37px;
+            background-color: #ef5b70;
+            z-index: 2;
+         }
+         & summary::-webkit-details-marker {
+            display: none;
+         }
+         & > summary {
+            list-style: none;
+         }
+         & summary:before {
+            content: "\25BC";
+            color: #ef5b70;
+            top: 8px;
+            left: 230px;
+            position: absolute;
+            font-size: 7px;
+            transform: scaleX(1.5);
+         }
+         &[open] summary:before {
+            content: "\25B2";
+            font-size: 7px;
+            transform: scaleX(1.5);
+         }
+      }
+   }
+   &-details {
+      &__summary {
+         border-bottom: 1px solid #ebebeb;
+         padding: 8px 0 8px 16px;
+         width: 243px;
+         outline: none;
+         position: relative;
+         cursor: pointer;
+         color: $dimgray;
+         font-size: 14px;
+         font-weight: 700;
+         line-height: 20px;
+         text-align: left;
+         text-transform: uppercase;
+      }
+   }
+}
