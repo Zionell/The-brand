@@ -1,0 +1,57 @@
+// Media
+@media (min-width: $level_5) {
+   // Hover for input
+   .input-hover {
+      &:hover {
+         border: 1px solid $bittersweetlight;
+         background: none;
+         &::placeholder {
+            color: $bittersweetlight;
+         }
+      }
+      &:focus {
+         border: 1px solid $bittersweet;
+      }
+   }
+   // Hover for button ver.1
+   .button-hover:hover {
+      background: $bittersweet;
+      color: $white;
+      .button-icon {
+         fill: $white;
+      }
+   }
+   // Hover for button ver.2
+   .button-hover2:hover {
+      border: 1px solid $bittersweet;
+      color: $bittersweet;
+   }
+   // Hover for button ver.3
+   .button-hover3:hover {
+      background: $white;
+      color: $bittersweet;
+   }
+   .close:hover {
+      fill: $bittersweet;
+   }
+   .shadow:hover {
+      box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.3);
+   }
+   // Hover for arrow color
+   .arrow-hover:hover {
+      i {
+         color: $bittersweet;
+      }
+   }
+   // Link hover 
+   .link-hover:hover{
+      color: $bittersweet;
+   }
+   // Hover for nav item 
+   .item:hover{
+      path{
+         fill:$bittersweet;
+         stroke: $bittersweet;
+      }
+   }
+}

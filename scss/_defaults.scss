@@ -2,6 +2,7 @@
 $white: #ffffff;
 $black: #000000;
 $bittersweet: #f16d7f;
+$bittersweetlight: #e6677893;
 $snow: #fbfbfb;
 $zambezi: #5d5d5d;
 $matterhorn: #575757;
@@ -97,3 +98,28 @@ $level_4: 800px;
 $level_5: 768px;
 $level_6: 600px;
 $level_7: 320px;
+
+section,
+article,
+header,
+main,
+footer,
+aside {
+   display: block;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100vh;
+}
+
+.main {
+   flex-grow: 1;
+}
+
+// Transition for hovers
+.trans {
+   transition: all 0.1s linear;
+}

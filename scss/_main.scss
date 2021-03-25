@@ -6,7 +6,7 @@
       justify-content: flex-end;
       align-items: center;
       min-height: 764px;
-      background: url(../assets/img/main/promo-background.png) -215px bottom no-repeat;
+      background: url(../img/main/promo-background.png) -215px bottom no-repeat;
    }
    &__h1 {
       @include fontstyle(bold, h1, cap);
@@ -24,7 +24,7 @@
       height: 86px;
       background: $bittersweet;
    }
- 
+
    &__span {
       @include fontstyle(semibold, 0, cap);
       font-size: 32px;
@@ -47,16 +47,16 @@
       margin-bottom: 96px;
    }
    &__card1 {
-      background: url(../assets/img/main/categories-women.jpg);
+      background: url(../img/main/categories-women.jpg);
    }
    &__card2 {
-      background: url(../assets/img/main/categories-men.jpg);
+      background: url(../img/main/categories-men.jpg);
    }
    &__card3 {
-      background: url(../assets/img/main/categories-kids.jpg);
+      background: url(../img/main/categories-kids.jpg);
    }
    &__card4 {
-      background: url(../assets/img/main/categories-accesories.jpg);
+      background: url(../img/main/categories-accesories.jpg);
       grid-column: 1/4;
    }
    &__card {
@@ -99,7 +99,7 @@
       display: grid;
       gap: 30px;
       grid-template-columns: repeat(auto-fill, 360px);
-      margin: 48px 0;
+      margin: 48px auto;
       z-index: 1;
    }
    &__card {
@@ -184,7 +184,7 @@
 
 // Subscribe
 .subscribe {
-   background: url(../assets/img/header-footer/footer-background.jpg) bottom no-repeat;
+   background: url(../img/header-footer/footer-background.jpg) bottom no-repeat;
    background-size: cover;
    &__wrap {
       display: flex;
@@ -247,40 +247,10 @@
    &__button {
       @include fontstyle(regular, text, cap);
       color: $white;
-      padding: 16px 18px;
+      padding: 15px 17px;
       background: $bittersweet;
+      border: 1px solid $bittersweet;
       border-radius: 0 23px 23px 0;
       letter-spacing: 0.35px;
-   }
-}
-
-// Footer
-.footer {
-   @extend .feature;
-   &__wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
-   &__h5 {
-      @include fontstyle(regular, h5, none);
-      color: $snow;
-   }
-   &__links {
-      display: grid;
-      grid-gap: 7px;
-      -ms-grid-columns: (minmax(30px, 1fr)) [auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-      max-width: 50%;
-      padding: 23px 0;
-   }
-   &-links__link {
-      width: 32px;
-      height: 32px;
-      text-align: center;
-      font-size: 15px;
-      line-height: 32px;
-      color: $black;
-      background: $white;
    }
 }
