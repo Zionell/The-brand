@@ -31,27 +31,54 @@
       background: $white;
       color: $bittersweet;
    }
+   // Hover for button ver.4
+   .button-hover4:hover {
+      border: 1px solid $bittersweet;
+      .card-hover__text, .card-hover__img{
+         color: $bittersweet;
+         path {
+         fill: $bittersweet;
+         }
+      }
+   }
+
+   .menu-title-hover:hover{
+      @include fontstyle(bold, text, upper);
+   }
+
+   // Hover for button close
    .close:hover {
       fill: $bittersweet;
    }
-   .shadow:hover {
-      box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.3);
-   }
+
    // Hover for arrow color
    .arrow-hover:hover {
       i {
          color: $bittersweet;
       }
    }
-   // Link hover 
-   .link-hover:hover{
+   // Hover for link
+   .link-hover:hover {
       color: $bittersweet;
    }
-   // Hover for nav item 
-   .item:hover{
-      path{
-         fill:$bittersweet;
+   // Hover for nav item
+   .item:hover {
+      path {
+         fill: $bittersweet;
          stroke: $bittersweet;
       }
    }
+   // Hover for card
+   .shadow:hover {
+      box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.3);
+   }
+   .filter-card:hover {
+      .product-card__img {
+         filter: brightness(0.4);
+      }
+      .card-hover {
+         display: flex;
+      }
+   }
+
 }

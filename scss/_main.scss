@@ -108,6 +108,7 @@
       grid-template-rows: 420px 1fr;
       @include fontstyle(regular, h4, upper);
       background: #f8f8f8;
+      position: relative;
    }
    &-card__img {
       cursor: pointer;
@@ -152,6 +153,26 @@
       border: 1px solid $bittersweet;
    }
 }
+// Style card-hover
+.card-hover {
+   display: none;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0 auto;
+   width: 138px;
+   border: 1px solid $white;
+   background: none;
+   padding: 13px;
+   position: absolute;
+   top: 33%;
+   left: 30%;
+   &__text {
+      @include fontstyle(regular, text, none);
+      line-height: 17px;
+      color: $white;
+   }
+}
+// Style card-hover end
 
 // Feature
 .feature {
