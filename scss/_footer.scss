@@ -1,0 +1,30 @@
+// Footer
+.footer {
+   @extend .feature;
+   &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__h5 {
+      @include fontstyle(regular, h5, none);
+      color: $snow;
+   }
+   &__links {
+      display: grid;
+      grid-gap: 7px;
+      -ms-grid-columns: (minmax(30px, 1fr)) [auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+      max-width: 50%;
+      padding: 23px 0;
+   }
+   &-links__link {
+      width: 32px;
+      height: 32px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 32px;
+      color: $black;
+      background: $white;
+   }
+}

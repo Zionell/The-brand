@@ -1,0 +1,193 @@
+// New arrivals
+.arrivals {
+   background-color: #f8f3f4;
+   padding: 60px 0;
+   &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__h3 {
+      @include fontstyle(regular, h3, upper);
+      color: $bittersweet;
+   }
+   &__breadcrumbs {
+      display: flex;
+   }
+   &-breadcrumbs {
+      &__link {
+         @include fontstyle(regular, text, upper);
+         color: #636363;
+         text-decoration: none;
+      }
+      &__list {
+         &::after {
+            content: "/";
+            margin: 0 5px;
+         }
+         &:last-of-type::after {
+            content: "";
+            margin: 0;
+         }
+      }
+   }
+   .active__bc {
+      color: $bittersweet;
+      font-weight: 700;
+   }
+}
+
+// Sidebar
+.product {
+   &__sidebar {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fill, 360px);
+      position: relative;
+      margin-top: 50px;
+      padding-bottom: 30px;
+   }
+   &-sidebar {
+      // Filter
+      &__filter {
+         text-align: left;
+         padding: 0 16px 13px 16px;
+         position: absolute;
+         top: 0;
+         background: #ffffff;
+      }
+      // Options
+      &__options {
+         grid-column-start: 2;
+         display: flex;
+         z-index: 10;
+         position: absolute;
+      }
+   }
+   &__details {
+      display: none;
+   }
+   &-filter {
+      &__link {
+         @include fontstyle(semibold, text, cap);
+         color: $black;
+         &-svg {
+            margin-left: 11px;
+         }
+      }
+      &__details {
+         margin-top: 18px;
+         width: 325px;
+         &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 5px;
+            height: 37px;
+            background-color: #ef5b70;
+            z-index: 2;
+         }
+         & summary::-webkit-details-marker {
+            display: none;
+         }
+         & > summary {
+            list-style: none;
+         }
+         &[open] summary {
+            color: $bittersweet;
+         }
+      }
+   }
+   &-details {
+      &__summary {
+         border-bottom: 1px solid #ebebeb;
+         padding: 8px 0 8px 12px;
+         // width: 243px;
+         outline: none;
+         cursor: pointer;
+         color: $dimgray;
+         @include fontstyle(regular, text, upper);
+         line-height: 20px;
+         text-align: left;
+      }
+      &__list {
+         text-align: left;
+         padding-left: 12px;
+      }
+   }
+   &-list__link {
+      color: $dimgray;
+      @include fontstyle(regular, text, cap);
+      display: block;
+      line-height: 24px;
+   }
+   &-options {
+      &__details {
+         & summary::-webkit-details-marker {
+            display: none;
+         }
+         & > summary {
+            list-style: none;
+         }
+         &[open] summary {
+            background: url("../img/catalog/arrow.png") right center no-repeat;
+            padding-right: 21px;
+            margin-right: 28px;
+         }
+         & summary {
+            background: url("../img/catalog/arrow.png") right center no-repeat;
+            padding-right: 21px;
+            margin-right: 28px;
+         }
+      }
+      &__summary {
+         outline: none;
+         cursor: pointer;
+         color: $dimgray;
+         @include fontstyle(regular, text, upper);
+         line-height: 20px;
+      }
+      &__form {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 9px;
+         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+         background: $white;
+      }
+   }
+   &-form__label {
+      @include fontstyle(regular, text, upper);
+      color: $dimgray;
+      line-height: 21px;
+      &-input {
+         margin-right: 9px;
+      }
+   }
+   // Pagination
+   &__pagination {
+      margin: 0 auto;
+   }
+   &-pagination__list {
+      display: flex;
+      justify-content: space-between;
+      width: 261px;
+      border-radius: 3px;
+      border: 1px solid #ebebeb;
+      padding: 13px 15px;
+      margin: 0 auto;
+   }
+   &-list__link {
+      @include fontstyle(regular, text, upper);
+      color: #ebebeb;
+      background: none;
+   }
+   &__current {
+      color: #ef5b70;
+   }
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+   color: $black;
+}
