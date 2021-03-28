@@ -15,7 +15,7 @@
       grid-gap: 7px;
       -ms-grid-columns: (minmax(30px, 1fr)) [auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-      max-width: 50%;
+      width: 15%;
       padding: 23px 0;
    }
    &-links__link {

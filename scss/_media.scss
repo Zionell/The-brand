@@ -1,3 +1,8 @@
+// Transition for hovers
+.trans {
+   transition: all 0.1s linear;
+}
+
 // Media
 @media (min-width: $level_5) {
    // Hover for input
