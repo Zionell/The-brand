@@ -172,12 +172,14 @@ body {
 
 .header-right__drop {
   display: none;
+  height: 764px;
   width: 232px;
   position: absolute;
   right: 0;
   z-index: 50;
   background: #ffffff;
-  padding-bottom: 128px;
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
 
 .header-right__burgermenu {
@@ -721,6 +723,7 @@ body {
   padding: 0 16px 13px 16px;
   position: absolute;
   top: 0;
+  z-index: 5;
   background: #ffffff;
 }
 
@@ -739,10 +742,12 @@ body {
 }
 
 .product-filter__link {
+  background: none;
   font-weight: 700;
   font-size: 14px;
   text-transform: capitalize;
   color: #000000;
+  padding: 13px 0;
 }
 
 .product-filter__link-svg {
@@ -751,7 +756,7 @@ body {
 
 .product-filter__details {
   margin-top: 18px;
-  width: 325px;
+  width: 330px;
 }
 
 .product-filter__details::before {
@@ -792,6 +797,7 @@ body {
 .product-details__list {
   text-align: left;
   padding-left: 12px;
+  padding-top: 24px;
 }
 
 .product-list__link {
@@ -800,7 +806,8 @@ body {
   font-size: 14px;
   text-transform: capitalize;
   display: block;
-  line-height: 24px;
+  line-height: 26px;
+  background: none;
 }
 
 .product-options__details summary::-webkit-details-marker {
@@ -880,7 +887,7 @@ body {
   margin: 0 auto;
 }
 
-.product-list__link {
+.product-list__page {
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -895,6 +902,23 @@ body {
 .fa-chevron-left,
 .fa-chevron-right {
   color: #000000;
+}
+
+.activefilter {
+  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.openfilter {
+  display: block;
+}
+
+.filterActive {
+  color: #f16d7f;
+}
+
+.filterActive .product-filter__link-svg path {
+  fill: #f16d7f;
 }
 
 .product__preview {
@@ -1486,10 +1510,18 @@ body {
   .button-hover4:hover {
     border: 1px solid #f16d7f;
   }
-  .button-hover4:hover .card-hover__text, .button-hover4:hover .card-hover__img {
+  .button-hover4:hover .card-hover__text,
+  .button-hover4:hover .card-hover__img {
     color: #f16d7f;
   }
-  .button-hover4:hover .card-hover__text path, .button-hover4:hover .card-hover__img path {
+  .button-hover4:hover .card-hover__text path,
+  .button-hover4:hover .card-hover__img path {
+    fill: #f16d7f;
+  }
+  .button-hover5:hover {
+    color: #f16d7f;
+  }
+  .button-hover5:hover .product-filter__link-svg path {
     fill: #f16d7f;
   }
   .menu-title-hover:hover {
@@ -1522,5 +1554,8 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .checkbox-hover:hover {
+    color: #f16d7f;
   }
 }

@@ -39,15 +39,23 @@
    // Hover for button ver.4
    .button-hover4:hover {
       border: 1px solid $bittersweet;
-      .card-hover__text, .card-hover__img{
+      .card-hover__text,
+      .card-hover__img {
          color: $bittersweet;
          path {
-         fill: $bittersweet;
+            fill: $bittersweet;
          }
       }
    }
+   // Hover for button ver.5
+   .button-hover5:hover {
+      color: $bittersweet;
+      .product-filter__link-svg path {
+         fill: $bittersweet;
+      }
+   }
 
-   .menu-title-hover:hover{
+   .menu-title-hover:hover {
       @include fontstyle(bold, text, upper);
    }
 
@@ -85,5 +93,8 @@
          display: flex;
       }
    }
-
+   // Hover for checkbox
+   .checkbox-hover:hover {
+      color: $bittersweet;
+   }
 }

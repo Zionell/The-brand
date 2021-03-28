@@ -33,10 +33,12 @@
          <!-- right container  -->
          <div class="header__right">
             <!-- burger-menu  -->
-            <svg class="header-right__burgermenu item trans" width="32" height="23" viewBox="0 0 32 23" fill="none"
-               xmlns="http://www.w3.org/2000/svg">
-               <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8" />
-            </svg>
+            <div id="menu" class="header-right__menu">
+               <svg class="header-right__burgermenu item trans" width="32" height="23" viewBox="0 0 32 23" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8" />
+               </svg>
+            </div>
             <!-- account  -->
             <a class="header-right__account" href="registration.html">
                <svg class="header-right-account__img item trans" width="29" height="29" viewBox="0 0 29 29" fill="none"
@@ -57,6 +59,50 @@
             </a>
          </div>
       </div>
+      <!-- drop burger-menu -->
+      <nav class="header-right__drop" id="dropMenu">
+         <!-- close button -->
+         <div class="header-drop__close" id="close">
+            <svg class="header-drop__close-button close" width="12" height="12" viewBox="0 0 18 18" fill="#575757"
+               xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z" />
+            </svg>
+         </div>
+         <p class="header-drop__text">MENU</p>
+         <ul class="header-drop__list">
+            <li class="header-drop__item">
+               <a href="catalog.html" class="header-drop__item-title menu-title-hover trans">MAN</a>
+            </li>
+            <li class="header-drop__sub-item">
+               <a href="#" class="header-drop__item-link link-hover trans">Accessories</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Bags</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Denim</a>
+               <a href="#" class="header-drop__item-link link-hover trans">T-Shirts</a>
+            </li>
+            <li class="header-drop__item">
+               <a href="#" class="header-drop__item-title menu-title-hover trans">WOMAN</a>
+            </li>
+            <li class="header-drop__sub-item">
+               <a href="#" class="header-drop__item-link link-hover trans">Accessories</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Jackets & Coats</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Polos</a>
+               <a href="#" class="header-drop__item-link link-hover trans">T-Shirts</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Shirts</a>
+            </li>
+            <li class="header-drop__item">
+               <a href="#" class="header-drop__item-title menu-title-hover trans">KIDS</a>
+            </li>
+            <li class="header-drop__sub-item">
+               <a href="#" class="header-drop__item-link link-hover trans">Accessories</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Jackets & Coats</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Polos</a>
+               <a href="#" class="header-drop__item-link link-hover trans">T-Shirts</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Shirts</a>
+               <a href="#" class="header-drop__item-link link-hover trans">Bags</a>
+            </li>
+         </ul>
+      </nav>
    </header> <!-- Header end -->
 
    <!-- Main  -->
@@ -111,13 +157,13 @@
                   <details class="product-sort__details product-sort__details--collor">
                      <summary class="product-sort__summary">CHOOSE COLOR</summary>
                      <div class="product-sort__position">
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="red" value="red">Red</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="yellow" value="yellow">Yellow</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="green" value="green">Green</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="blue" value="blue">Blue</label>
                      </div>
 
@@ -125,24 +171,24 @@
                   <details class="product-sort__details product-sort__details--size">
                      <summary class="product-sort__summary">CHOOSE SIZE</summary>
                      <div class="product-sort__position">
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="xs" value="xs">XS</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="s" value="s">S</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="m" value="m">M</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="l" value="l">L</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="xl" value="xl">XL</label>
-                        <label class="product-sort__label"><input class="product-sort__label-input" type="checkbox"
+                        <label class="product-sort__label checkbox-hover trans"><input class="product-sort__label-input" type="checkbox"
                               name="xxl" value="xxl">XXL</label>
                      </div>
                   </details>
                   <details class="product-sort__details product-sort__details--quantity">
                      <summary class="product-sort__summary">QUANTITY</summary>
                      <div class="product-sort__position">
-                        <input class="product-sort__label-input product-sort--quantity" type="number" value="1" min="1" required
+                        <input class="product-sort__label-input product-sort--quantity input-hover trans" type="number" value="1" min="1" required
                            name="quantity">
                      </div>
                   </details>
