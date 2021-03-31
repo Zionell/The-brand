@@ -1,7 +1,7 @@
 // Promo logo
 .promo {
    background: #f1e4e6;
-   .promo__wrap {
+   &__wrap {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -18,10 +18,10 @@
       content: "";
       position: absolute;
       left: -28px;
-      bottom: 3px;
+      bottom: 1px;
       display: block;
       width: 12px;
-      height: 86px;
+      height: 92px;
       background: $bittersweet;
    }
 
@@ -41,7 +41,7 @@
    &__wrap {
       display: grid;
       gap: 30px;
-      grid-template-columns: 360px 360px 360px;
+      grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
       grid-template-rows: 260px 180px;
       margin-top: 65px;
       margin-bottom: 96px;
@@ -55,15 +55,18 @@
    &__card3 {
       background: url(../img/main/categories-kids.jpg);
    }
-   &__card4 {
-      background: url(../img/main/categories-accesories.jpg);
-      grid-column: 1/4;
-   }
    &__card {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background-position: top center;
+      background-size: cover;
+   }
+   &__card4 {
+      background: url(../img/main/categories-accesories.jpg);
+      grid-column: 1/4;
+      background-position: 0 0;
    }
    &-wrap__h5 {
       @include fontstyle(regular, h5, cap);
@@ -98,7 +101,7 @@
    &__grid-wrap {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(auto-fill, 360px);
+      grid-template-columns: repeat(auto-fit, 360px);
       margin: 48px auto;
       z-index: 1;
    }
@@ -112,6 +115,7 @@
    }
    &-card__img {
       cursor: pointer;
+      width: 100%;
    }
    &-card__name {
       text-decoration: none;
@@ -181,10 +185,10 @@
       display: flex;
       justify-content: space-between;
       text-align: center;
-      padding: 103px 0;
+      padding: 103px 15px;
    }
    &__item {
-      max-width: 28%;
+      max-width: 32%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -210,10 +214,11 @@
    &__wrap {
       display: flex;
       justify-content: space-between;
-      padding: 100px 0 130px;
+      padding: 100px 15px 130px;
    }
    &__info {
-      @extend .subscribe__wrap;
+      display: flex;
+      justify-content: space-between;
       flex-direction: column;
       align-items: center;
       width: 30%;

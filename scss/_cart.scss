@@ -1,23 +1,30 @@
 .shopping {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
    margin-top: 96px;
    margin-bottom: 128px;
    &__wrap {
+      max-width: 652px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      margin-right: 25px;
+      margin-bottom: 46px;
    }
    &__grid-wrap {
       display: grid;
       row-gap: 40px;
-      margin-right: 25px;
    }
-   // Left container
-   // Cards product
+   // Cards container
    &__card {
       display: grid;
       grid-template-columns: 262px 262px 66px;
       column-gap: 31px;
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+   }
+   &-card__img {
+      width: 100%;
    }
    &-name__h3 {
       @include fontstyle(regular, h3, cap);
@@ -45,20 +52,21 @@
       text-align: end;
       width: 43px;
       height: 24px;
-      border: 1px solid #EAEAEA;
+      border: 1px solid #eaeaea;
       margin-left: 24px;
    }
    &-card__close {
       margin-left: 30px;
       cursor: pointer;
    }
-   &-card__name, 
+   &-card__name,
    &-card__close {
       margin-top: 22px;
    }
-   // Right container
-   &__flex-wrap {
-      width: 360px;
+   // Form container
+   &__form {
+      max-width: 360px;
+      width: 100%;
       margin-top: 18px;
    }
    // Delivery registration
@@ -142,9 +150,10 @@
 
    // Button cart
    &__button {
+      max-width: 652px;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      width: 652px;
       margin-top: 72px;
    }
    &-button__text {

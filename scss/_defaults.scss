@@ -34,6 +34,16 @@ $fontsize: (
    text: 14px,
    small: 11px,
 );
+$fontsize_l3: (
+   h1l3: 44px,
+   h2l3: 30px,
+   h3l3: 24px,
+   h4l3: 22px,
+   h5l3: 20px,
+   textbigl3: 16px,
+   textl3: 14px,
+   smalll3: 13px,
+);
 
 $texttransform: (
    none: none,
@@ -41,7 +51,7 @@ $texttransform: (
    upper: uppercase,
 );
 
-// Исправить значения на переменные
+// Nixit for font style
 @mixin fontstyle($fw, $fs, $tt) {
    @if map-has-key($fontfamily_mainweight, $fw) {
       font-weight: #{map-get($fontfamily_mainweight, $fw)};
@@ -51,6 +61,27 @@ $texttransform: (
    }
    @if map-has-key($fontsize, $fs) {
       font-size: #{map-get($fontsize, $fs)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($texttransform, $tt) {
+      text-transform: #{map-get($texttransform, $tt)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$tt}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+}
+// Nixit for font style for @media
+@mixin fontstyle_l3($fw, $fs, $tt) {
+   @if map-has-key($fontfamily_mainweight, $fw) {
+      font-weight: #{map-get($fontfamily_mainweight, $fw)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fw}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($fontsize_l3, $fs) {
+      font-size: #{map-get($fontsize_l3, $fs)};
    } @else {
       @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
          + "Please make sure it is defined in `$breakpoints` map.";
@@ -91,13 +122,14 @@ $desktopwidth: 1140px;
 }
 
 // MEDIA
-$level_1: 1300px;
-$level_2: 1100px;
-$level_3: 950px;
+$level_1: 1170px;
+$level_2: 1000px;
+$level_3: 900px;
 $level_4: 800px;
-$level_5: 768px;
+$level_5: 700px;
 $level_6: 600px;
-$level_7: 320px;
+$level_7: 450px;
+$level_8: 320px;
 
 section,
 article,
@@ -117,5 +149,3 @@ body {
 .main {
    flex-grow: 1;
 }
-
-

@@ -12,10 +12,8 @@
    }
    &__links {
       display: grid;
-      grid-gap: 7px;
-      -ms-grid-columns: (minmax(30px, 1fr)) [auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-      width: 15%;
+      grid-gap: 8px;
+      grid-template-columns: repeat(4, minmax(30px, 1fr));
       padding: 23px 0;
    }
    &-links__link {
