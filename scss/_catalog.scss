@@ -54,6 +54,7 @@
          padding: 0 16px 13px 16px;
          position: absolute;
          top: 0;
+         z-index: 5;
          background: #ffffff;
       }
       // Options
@@ -69,15 +70,17 @@
    }
    &-filter {
       &__link {
+         background: none;
          @include fontstyle(semibold, text, cap);
          color: $black;
+         padding: 13px 0;
          &-svg {
             margin-left: 11px;
          }
       }
       &__details {
          margin-top: 18px;
-         width: 325px;
+         width: 330px;
          &::before {
             content: "";
             display: block;
@@ -113,13 +116,15 @@
       &__list {
          text-align: left;
          padding-left: 12px;
+         padding-top: 24px;
       }
    }
    &-list__link {
       color: $dimgray;
       @include fontstyle(regular, text, cap);
       display: block;
-      line-height: 24px;
+      line-height: 26px;
+      background: none;
    }
    &-options {
       &__details {
@@ -177,7 +182,7 @@
       padding: 13px 15px;
       margin: 0 auto;
    }
-   &-list__link {
+   &-list__page {
       @include fontstyle(regular, text, upper);
       color: #ebebeb;
       background: none;
@@ -187,7 +192,24 @@
    }
 }
 
+// Arrow into pagination
 .fa-chevron-left,
 .fa-chevron-right {
    color: $black;
+}
+
+// Active filter
+.activefilter {
+   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+// Open filter
+.openfilter {
+   display: block;
+}
+// Filter active
+.filterActive {
+   color: $bittersweet;
+   .product-filter__link-svg path {
+      fill: $bittersweet;
+   }
 }
