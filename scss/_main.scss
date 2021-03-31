@@ -107,8 +107,6 @@
    }
    &__card {
       display: grid;
-      grid-template-columns: 360px;
-      grid-template-rows: 420px 1fr;
       @include fontstyle(regular, h4, upper);
       background: #f8f8f8;
       position: relative;
