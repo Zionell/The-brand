@@ -6,6 +6,7 @@
       justify-content: flex-end;
       align-items: center;
       min-height: 764px;
+      overflow: hidden;
       background: url(../img/main/promo-background.png) -215px bottom no-repeat;
    }
    &__h1 {
@@ -13,6 +14,7 @@
       line-height: 40px;
       margin-right: 100px;
       position: relative;
+      animation: moveTo 2s forwards;
    }
    &__h1::before {
       content: "";
@@ -41,32 +43,28 @@
    &__wrap {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
-      grid-template-rows: 260px 180px;
       margin-top: 65px;
       margin-bottom: 96px;
    }
-   &__card1 {
-      background: url(../img/main/categories-women.jpg);
-   }
-   &__card2 {
-      background: url(../img/main/categories-men.jpg);
-   }
-   &__card3 {
-      background: url(../img/main/categories-kids.jpg);
-   }
    &__card {
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-position: top center;
       background-size: cover;
+      overflow: hidden;
    }
    &__card4 {
-      background: url(../img/main/categories-accesories.jpg);
       grid-column: 1/4;
       background-position: 0 0;
+   }
+   &-card {
+      &__wrap {
+         position: absolute;
+         text-align: center;
+      }
    }
    &-wrap__h5 {
       @include fontstyle(regular, h5, cap);
@@ -101,6 +99,7 @@
    &__grid-wrap {
       display: grid;
       gap: 30px;
+      justify-content: center;
       grid-template-columns: repeat(auto-fit, 360px);
       margin: 48px auto;
       z-index: 1;
@@ -199,7 +198,7 @@
       padding: 25px 0 13px;
    }
    &-item__text {
-      @include fontstyle(regular, text, none);
+      @include fontstyle(light, text, none);
       line-height: 17px;
       color: $snow;
    }
@@ -276,5 +275,14 @@
       border: 1px solid $bittersweet;
       border-radius: 0 23px 23px 0;
       letter-spacing: 0.35px;
+   }
+}
+
+@keyframes moveTo {
+   0% {
+      left: 100%;
+   }
+   100% {
+      left: 0;
    }
 }
