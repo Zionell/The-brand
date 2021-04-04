@@ -16,7 +16,7 @@
    }
    &-breadcrumbs {
       &__link {
-         @include fontstyle(regular, text, upper);
+         @include fontstyle(light, text, upper);
          color: #636363;
          text-decoration: none;
       }
@@ -42,19 +42,19 @@
    &__sidebar {
       display: grid;
       gap: 30px;
-      grid-template-columns: repeat(auto-fill, 360px);
+      grid-template-columns: repeat(auto-fit, 360px);
       position: relative;
       margin-top: 50px;
-      padding-bottom: 30px;
    }
    &-sidebar {
       // Filter
       &__filter {
          text-align: left;
-         padding: 0 16px 13px 16px;
+         padding: 0 16px;
+         margin: -13px 0 0 0;
          position: absolute;
          top: 0;
-         z-index: 5;
+         z-index: 15;
          background: #ffffff;
       }
       // Options
@@ -62,11 +62,12 @@
          grid-column-start: 2;
          display: flex;
          z-index: 10;
-         position: absolute;
+         width: 360px;
       }
    }
    &__details {
       display: none;
+      padding-bottom: 13px;
    }
    &-filter {
       &__link {
@@ -128,6 +129,10 @@
    }
    &-options {
       &__details {
+         position: relative;
+         .mr-0 {
+            margin-right: 0;
+         }
          & summary::-webkit-details-marker {
             display: none;
          }
@@ -154,6 +159,7 @@
       }
       &__form {
          display: flex;
+         position: absolute;
          flex-direction: column;
          align-items: flex-start;
          padding: 9px;
@@ -212,4 +218,8 @@
    .product-filter__link-svg path {
       fill: $bittersweet;
    }
+}
+// Right for details into options
+.right {
+   right: 0;
 }

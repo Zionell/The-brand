@@ -9,7 +9,6 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-right: 25px;
       margin-bottom: 46px;
    }
    &__grid-wrap {
@@ -23,8 +22,13 @@
       column-gap: 31px;
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
    }
-   &-card__img {
-      width: 100%;
+   &-card {
+      &__img {
+         width: 100%;
+      }
+      &__link {
+         overflow: hidden;
+      }
    }
    &-name__h3 {
       @include fontstyle(regular, h3, cap);
@@ -49,7 +53,7 @@
       @include fontstyle(regular, h4, cap);
       line-height: 28px;
       color: #656565;
-      text-align: end;
+      text-align: center;
       width: 43px;
       height: 24px;
       border: 1px solid #eaeaea;
@@ -68,14 +72,19 @@
       max-width: 360px;
       width: 100%;
       margin-top: 18px;
+      margin-left: 25px;
    }
    // Delivery registration
    &__h5 {
       @include fontstyle(light, h5, upper);
       line-height: 20px;
+      color: #222222;
    }
    &-delivery__adress {
       width: 100%;
+      @include fontstyle(light, none, cap);
+      font-size: 13px;
+      line-height: 16px;
       border: 1px solid #a4a4a4;
       padding: 13px 0 16px 18px;
       margin-top: 20px;
@@ -95,7 +104,7 @@
       margin-top: 23px;
       padding: 11px 12px 11px 12px;
       background: $white;
-      @include fontstyle(light, text, cap);
+      @include fontstyle(light, text, upper);
       line-height: 16px;
       color: #b1b1b1;
    }
