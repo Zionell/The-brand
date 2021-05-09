@@ -21,10 +21,6 @@ $fontfamily_mainweight: (
    bold: 900,
 );
 
-body {
-   font-family: $fontfamily_main;
-}
-
 $fontsize: (
    h1: 48px,
    h2: 30px,
@@ -117,7 +113,9 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   font-family: $fontfamily_main;
    min-width: $level_8;
+   min-height: 100vh;
 }
 
 .main {

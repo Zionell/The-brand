@@ -1,6 +1,7 @@
 .registration {
-   display: flex;
-   justify-content: space-between;
+   display: grid;
+   grid-template-columns: 360px 1fr;
+   gap: 128px;
    margin: 65px auto 95px;
    // form
    &__form {
@@ -68,5 +69,3 @@
       line-height: 40px;
    }
 }
-
-

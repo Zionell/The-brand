@@ -42,6 +42,21 @@
       &__account {
          margin: 0 33px;
       }
+      &__cart {
+         position: relative;
+      }
+      &-cart__count {
+         position: absolute;
+         top: -25px;
+         left: 22px;
+         @include fontstyle(regular, 0, none);
+         font-size: 12px;
+         color: $white;
+         line-height: 14px;
+         padding: 5px 8px; 
+         background: $bittersweet;
+         border-radius: 50%;
+      }
    }
 }
 

@@ -57,7 +57,8 @@
       &__text {
          @include fontstyle(light, text, 0);
          color: #5e5e5e;
-         max-width: 555px;
+         line-height: 17px;
+         max-width: 550px;
          margin: 48px auto 32px;
       }
       &__h3 {
@@ -91,6 +92,12 @@
             background: url("../img/catalog/arrow.png") right center no-repeat;
             padding-right: 25px;
             margin-right: 30px;
+         }
+         & .mr-0 {
+            margin-right: 0;
+         }
+         &[open] .mr-0 {
+            margin-right: 0;
          }
       }
       &__summary {
@@ -142,8 +149,11 @@
          color: $bittersweet;
          &-svg {
             margin-right: 23px;
-               fill: $bittersweet;
+            fill: $bittersweet;
          }
       }
    }
+}
+.mt-129 {
+   margin-top: 129px;
 }

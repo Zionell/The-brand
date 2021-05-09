@@ -96,7 +96,7 @@
          filter: brightness(0.4);
       }
       .card-hover {
-         display: flex;
+         opacity: 1;
       }
    }
    // Hover for checkbox
@@ -105,10 +105,6 @@
    }
    .scale:hover {
       transform: scale(1.2);
-   }
-   // Hover rotate
-   .rotate:hover {
-      transform: rotateY(180deg);
    }
 }
 
@@ -312,6 +308,9 @@
 
    // Media for subscribe
    .subscribe {
+      @media (max-width: $level_3) {
+         background-position: 27% bottom;
+      }
       &__wrap {
          @media (max-width: $level_2) {
             justify-content: space-around;
@@ -569,7 +568,7 @@
       }
       &-card__close {
          @media (max-width: $level_1) {
-            margin: 22px 0 0 125px;
+            margin: 22px 20px 0 125px;
          }
          @media (max-width: $level_5) {
             margin-top: 13px;
@@ -656,6 +655,124 @@
       &-totalcost__button {
          @media (max-width: $level_7) {
             padding: 14px 6px;
+         }
+      }
+   }
+}
+
+// Media for PRODUCT
+
+@media all {
+   .product {
+      &-karusel__img img {
+         @media (max-width: $level_5) {
+            width: 100%;
+         }
+      }
+      &-preview__description {
+         @media (max-width: $level_3) {
+            top: 0;
+            border-bottom: 1px solid #eaeaea;
+            border-top: 1px solid #eaeaea;
+            background: #ffffff;
+            padding-top: 65px;
+            padding-bottom: 65px;
+         }
+      }
+
+      // Product description
+      &-description__info {
+         @media (max-width: $level_7) {
+            padding-bottom: 32px;
+         }
+         @media (max-width: $level_5) {
+            border-bottom: none;
+            position: relative;
+         }
+      }
+      &-description__info::after {
+         @media (max-width: $level_5) {
+            content: "";
+            position: absolute;
+            top: 278px;
+            left: 50%;
+            transform: translate(-50%);
+            width: 47%;
+            height: 1px;
+            background: #eaeaea;
+         }
+      }
+      &-description__text {
+         @media (max-width: $level_6) {
+            padding-left: 10px;
+            padding-right: 10px;
+         }
+         @media (max-width: $level_7) {
+            line-height: 20px;
+            margin-top: 32px;
+         }
+      }
+      &-sort__summary {
+         @media (max-width: $level_7) {
+            font-size: 10px;
+         }
+      }
+      &-description__sort {
+         margin-top: 49px;
+      }
+      // Product
+      .mt-129 {
+         @media (max-width: $level_7) {
+            margin-top: 64px;
+         }
+      }
+   }
+}
+// Media for REGISTRATION
+
+@media all {
+   .registration {
+      @media (max-width: $level_2) {
+         gap: 90px;
+      }
+      @media (max-width: $level_3) {
+         gap: 50px;
+         margin: 40px auto 95px;
+      }
+      @media (max-width: $level_4) {
+         gap: 22px;
+      }
+      @media (max-width: $level_5) {
+         display: flex;
+         flex-direction: column;
+         max-width: 360px;
+      }
+      @media (max-width: $level_6) {
+         align-items: center;
+      }
+      &__form {
+         @media (max-width: $level_5) {
+            margin-bottom: 30px;
+         }
+      }
+      &-advantages {
+         &__h3 {
+            @media (max-width: $level_3) {
+               font-size: 16px;
+            }
+         }
+         &__text {
+            @media (max-width: $level_3) {
+               font-size: 16px;
+               line-height: 19px;
+            }
+         }
+      }
+      &-list__item {
+         @media (max-width: $level_3) {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 13px;
          }
       }
    }
