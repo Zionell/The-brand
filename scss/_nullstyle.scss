@@ -43,6 +43,21 @@ textarea {
 input::-ms-clear {
    display: none;
 }
+// Для iphone
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+// Конец
+// Убрать/невидимка стрелочку у input
+input::-webkit-calendar-picker-indicator {
+   opacity: 0;
+}
+// Конец
+
 button {
    cursor: pointer;
 }
